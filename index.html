@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>限时导航栏示例</title>
+		<script src="LimitTimeNavBar.js"></script>
+		<link href="LimitTimeNavBar.css" rel="stylesheet"/>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		   
+	</head>
+	<body>
+		<div id='box'></div>
+		<div id='span'></div>
+	</body>
+	<script>
+		var callback=function(a){
+			var span=document.querySelector('#span')
+			span.innerHTML=a.timeDesc;
+			console.log(a)
+		}
+		new LimitTimeNavBar({
+			el:'#box',
+			data:[
+			{"statusDesc":"已开抢","timeDesc":"21:00","leftTime":0,"startTime":1575896400,"dateDesc":"昨日","selected":false,"status":3},
+			{"statusDesc":"已开抢","timeDesc":"22:00","leftTime":0,"startTime":1575900000,"dateDesc":"昨日","selected":false,"status":3},
+			{"statusDesc":"新品首发","acm":"3.mce.1_10_1nad2.27637.0.h9qFsrKfpUjli.pos_1-m_543231-sd_119","dateDesc":"今日","liveActivityId":0,"special":true,"timeMark":"4","timeDesc":"00:00","bannerLink":"","leftTime":0,"startTime":1575907200,"bannerImg":"","selected":false,"status":3},
+			{"statusDesc":"已开抢","timeDesc":"10:00","leftTime":0,"startTime":1575943200,"dateDesc":"今日","selected":false,"status":3},
+			{"statusDesc":"已开抢","timeDesc":"13:00","leftTime":0,"startTime":1575954000,"dateDesc":"今日","selected":false,"status":3},
+			{"statusDesc":"已开抢","timeDesc":"16:00","leftTime":0,"startTime":1575964800,"dateDesc":"今日","selected":false,"status":3},
+			{"statusDesc":"主推爆款","acm":"3.mce.1_10_1nacw.27637.0.h9qFsrKfpUjlj.pos_2-m_543228-sd_119","dateDesc":"今日","liveActivityId":0,"special":true,"timeMark":"4","timeDesc":"19:00","bannerLink":"","leftTime":6504,"startTime":1575975600,"bannerImg":"","selected":true,"status":2},
+			{"statusDesc":"即将开抢","timeDesc":"21:00","leftTime":6504,"startTime":1575982800,"dateDesc":"今日","selected":false,"status":1},
+			{"statusDesc":"即将开抢","timeDesc":"22:00","leftTime":10104,"startTime":1575986400,"dateDesc":"今日","selected":false,"status":1},
+			{"statusDesc":"新品首发","acm":"3.mce.1_10_1nad4.27637.0.h9qFsrKfpUjlk.pos_3-m_543232-sd_119","dateDesc":"明日","liveActivityId":0,"special":true,"timeMark":"4","timeDesc":"00:00","bannerLink":"","leftTime":17304,"startTime":1575993600,"bannerImg":"","selected":false,"status":1},
+			{"statusDesc":"即将开抢","timeDesc":"10:00","leftTime":53304,"startTime":1576029600,"dateDesc":"明日","selected":false,"status":1},
+			{"statusDesc":"即将开抢","timeDesc":"13:00","leftTime":64104,"startTime":1576040400,"dateDesc":"明日","selected":false,"status":1},
+			{"statusDesc":"即将开抢","timeDesc":"16:00","leftTime":74904,"startTime":1576051200,"dateDesc":"明日","selected":false,"status":1},
+			{"statusDesc":"热门推荐","acm":"3.mce.1_10_1nad0.27637.0.h9qFsrKfpUjll.pos_4-m_543230-sd_119","dateDesc":"明日","liveActivityId":0,"special":true,"timeMark":"4","timeDesc":"19:00","bannerLink":"","leftTime":85704,"startTime":1576062000,"bannerImg":"","selected":false,"status":1}
+			],
+			callback:callback
+		})
+	</script>
+</html>
