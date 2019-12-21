@@ -270,6 +270,8 @@
 				var divideStatusDesc=document.createElement('div');// <p style="font-weight: bold;">{{item.timeDesc}}</p>
 				divideStatusDesc.innerHTML=item.statusDesc;
 				divideStatusDesc.style.fontWeight="bold";
+				divideStatusDesc.style.fontSize='12px';
+				divideStatusDesc.style.paddingTop='5px';
 				dividecontent.appendChild(divideStatusDesc);					
 				})
 				callback(basedatas.map);
